@@ -1,0 +1,2162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd"><html lang="en"><head>
+<link rel="icon" data-savepage-href="https://patriotweb.gmu.edu/favicon.ico" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAAD////////////s8Oj8/Pz///////////////////////////////////////////////////////+6yrPf59v////////////////////////////////////////////////////////g59yluZz////////////////////////////////////////////////////////9/fx+mmv19/T///////////////////////////////////////////////////////+9y7GluJX////////////////////////////////////////////////////////4+fZWezjh6Nv///////////////////////////////////////////////////////+ds400Yg/j6t3////////////////////////////////////////////////////5+viFoG9TeTK7y6////////////////////////////////////////////////////+5x7GPpXuLpXquwKby9vD////////////////////////////////////////////b8vZunXx7k1egtY7c5NT////////////////////////////////////////////4//+B3fx5tqtwiUM/ZRGWrYL////////////////////////////////////////////e9v9Pz/9s1Pmqz8SquJP6+fT////////////////////////////////////////////r+f5s1PonxP1P0f2v5/v////////////////////////////////////////////////////c9f5v1vkjv/XJ7/z////////////////////////////////////////////////////////c9f646vz////////////////////////////////////////////////////////////8/v/+//////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"><script data-savepage-type="" type="text/plain" async="" data-savepage-src="https://patriotweb.gmu.edu/opnet_browsermetrix.c.js"></script><script data-savepage-type="" type="text/plain"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style data-savepage-href="/gmugifs/web_defaultapp.css" type="text/css">/*
+  AUDIT TRAIL: 5.2
+  1. Initial release.                        JWF 1/9/2002
+  AUDIT TRAIL: 5.3
+  2. For September 2002 release.             GPV 6/27/2002
+  3. FOR UI phase II release		     RK  7/29/2002
+     Following new classes added
+
+     Tables 
+           DATA With Border (Table class with borders)
+		Its related classes defined as db.
+ 	   Non Tabular Data
+		Related classes defined as (nt)
+
+     	   Header class (TD.plheadermenulinks) for plain table.
+	        This class defines attributes for header tables.
+		
+     Anchors
+	   menulinktext2 (Menu classes)
+	   sitemaplevel1 (Site Map level 1)
+	   sitemaplevel2 (Site Map level 2)
+	   sitemaplevel3 (Site Map level 3)
+
+    	   whitespace link (This anchor gives more spacing at top and bottom)
+
+  4. Fix for defect #53-0017 and #53-0018    Rk 8/23/2002
+	  Added a campus pipeline class which will be used in body tag.
+          Changed Input bg color to white
+  5. Added a class fieldmediumtextbold for student 		Rk 9/3/2002
+
+  AUDIT TRAIL:7.0						Rk 6/22/04
+  1. Modify fonts to use Verdana
+  2. Added tab styles to self service 	
+	 
+  AUDIT TRAIL: 7.0  George Mason University Modified       JCB 03/17/2006
+                    Changed colors for Mason.
+				    Removed SCT background image.
+				 
+  AUDIT TRAIL: 7.0  George Mason University Modified       JCB 4/10/2006
+  1.  Added the following lines for Admissions:
+      Line 1207 - This adds color to the question area in tables. - JCB 4/7/2006
+      Line 1268 - This adds lines to the bottom of answer areas in tables. - JCB 4/10/2006
+  	 
+  AUDIT TRAIL: 7.0  George Mason University Modified       JCB 4/17/2006
+  1.  Added the following line for Finance:
+      Line 411 - This adds underline to links on Budget Query tables. - JCB 4/24/2006
+  	 
+  AUDIT TRAIL END
+
+  FILE NAME..: web_defaultapp.css
+  RELEASE....: 7.0 
+  PRODUCT....: WTLWEB
+  COPYRIGHT..: Copyright (C) SCT Corporation 2002. All rights reserved.
+*/
+
+
+/* BROWSER CONSIDERATIONS - Overall
+   ========================================================
+   Rule:   Set margin-left and margin-right only on BODY, not on DIVS.
+   Reason: Older browsers do not recognize margins on DIVs.
+
+   Rule:   No underscores.
+   Reason: Underscores are not valid in CSS syntax.
+
+   Rule:   Use percentages to define font sizes. Normal text should be 90%.
+   Reason: Presents text in the user's preferred font size. Facilitates page fluidity.
+
+   Rule:   Use precentages to define margins.
+   Reason: Facilitates page fluidity.
+
+   Rule:   Apply font rules to TD and TH elements. Do not rely on inheritance from the BODY.
+   Reason: Some browsers do not support inheritance well.
+*/
+
+/* TEXT CLASSES                                             */
+/* All text classes should have rules defined for at least  */
+/* the following properties (unless the class has a special */
+/* purpose):                                                */
+/* color, font-family, font-weight, font-size, font-style   */
+/* text-align                                               */
+/* ======================================================== */
+.centeraligntext {
+text-align: center;
+}
+
+.leftaligntext {
+text-align: left;
+}
+
+.rightaligntext {
+text-align: right;
+}
+
+.menulisttext {
+list-style: none;
+}
+
+.captiontext {
+color: black;
+/* Mason added the following background-color line. */
+background-color: #FFCC33;
+/* This changes the color of the text above a table and its background. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+/*font-style: italic; SCT V7 default */
+text-align: left;
+margin-top: 1em;
+}
+
+.skiplinks {
+display: none;
+}
+
+.pageheaderlinks {
+color: #000000;
+/* color: #FFFFFF; SCT V7 default */
+/* This changes the color of the dividers used in the Exit nav bar. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold; /* Mason Added. */
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+font-style: normal;
+text-align: center;
+}
+
+.requirementnotmet {
+color: red;
+/* color: black; SCT V7 default */
+}  
+
+/* Class for Sub-menu Items                                  */
+/* ========================================================  */
+.pageheaderlinks2 {
+color: #000000;
+/* color: #CED5EA; SCT V7 default */
+/* This changes the color of the dividers used in the top nav bar. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+/* Mason added the following font-weight line. */
+font-weight: bold;
+font-size: 90%;
+text-align: justify;
+}
+
+.pagebodylinks {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: center;
+}
+
+.gotoanchorlinks {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.pagefooterlinks {
+color: black;
+/* This changes the color of the dividers used in the bottom nav bar. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: center;
+/* BROWSER CONSIDERATION - To make Netscape and IE compatible for PageFooter Division. */
+/* Margin-left style specified for Netscape within parent SPAN tag,                    */
+/* while IE uses the padding-left style within parent DIV tag.                         */
+margin-left: 3px; 
+}
+
+.backlinktext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: right;
+margin-bottom: 5px;
+}
+
+.menuheadertext {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 100%;
+font-style: normal;
+text-align: left;
+}
+
+.menulinktext {
+color: #006633;
+/* color: #0F2167; SCT V7 default */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-style: normal;
+}
+
+.menulinkdesctext {
+color: black;
+/* This changes the color of the menu link description. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.normaltext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.infotext {
+color: black;
+/* This changes the color of the informational text.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.errortext {
+color: black;
+/* This changes the color of the error message text.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.warningtext {
+color: black;
+/* This changes the color of the warning message text.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.multipagemsgtext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.releasetext {
+color: black;
+/* This changes the color of the release text. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+text-transform: uppercase;
+}
+
+.requiredmsgtext {
+color: black;
+/* This changes the color of the required message text - it is usually next to an asterisk. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlabeltext {
+color: black;
+/* This changes the color of the field labels - text.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlabeltextinvisible {
+display: none;
+}
+
+.fieldrequiredtext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldformattext {
+color: black;
+/* This changes the color of the note or format text within a field label.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldformatboldtext {
+color: black;
+/* This changes the color of the note or format text within a field label.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fielderrortext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldsmallboldtext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldsmalltext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldmediumtext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldlargetext {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 110%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldmediumtextbold {
+color: black;
+/* Don't know what this changes.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+.fieldOrangetextbold {
+color: NAVY;
+/* color: ORANGE; SCT V7 default */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+
+
+/* ANCHORS (LINKS)                                          */
+/* ======================================================== */
+A:link {
+color:#006633;
+/* color:#0000ff; SCT V7 default */
+/* This changes the color of the bottom nav bar links. */
+/* Mason added the following font-weight line. */
+font-weight: bold;
+text-decoration: underline;
+/* text-decoration:none; SCT V7 default */
+}
+
+A:visited {
+color:#006633;
+/* color:#660099; SCT V7 default */
+/* This changes the color of the bottom nav bar links after they have been clicked. */
+/* Mason added the following font-weight line. */
+font-weight: bold;
+text-decoration:underline;
+/* text-decoration:none; SCT V7 default */
+}
+
+A:active {
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+/* This changes the color of the bottom nav bar link right after it has been clicked. 
+In other words, the last link accessed. */
+/* Mason added the following font-weight line. */
+text-decoration: underline;
+}
+
+A:hover {
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+/* This changes the color of the bottom nav bar links when the mouse is moved over it. */
+text-decoration:underline;
+}
+
+
+/* ANCHOR Definitions for Home Page MenuItems class.        */
+/* ======================================================== */
+A.menulinktext {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+color:#006633;
+/* color:#0000ff; SCT V7 default */
+text-decoration: none;
+}
+
+
+A.submenulinktext {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-transform: none;
+color: #006633;
+/* color:#0000ff; SCT V7 default */
+/* This changes the color of the top nav bar links in Netscape. */
+text-decoration: none;
+}
+
+A.submenulinktext:hover {
+background-color: #006633;
+/* background-color: #1E2B83; SCT V7 default */
+font-family:  verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: justify;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+A.submenulinktext:visited {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: normal;
+/* font-weight: bold; SCT V7 default */
+font-size: 90%;
+font-style: normal;
+text-transform: none;
+color:#006633;
+/* color:#660099; SCT V7 default */
+/* This changes the top nav bar link color */
+text-decoration: none;
+}
+
+A.submenulinktext:visited:hover {
+background-color: #FFCC33;
+/* background-color: #1E2B83; SCT V7 default */
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: justify;
+text-transform: none;
+color: #000000;
+/* color: #FFFFFF; SCT V7 default */
+/* This changes the top nav bar hover link color */
+text-decoration: none;
+}
+
+A.submenulinktext2 {
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+/* font-style:  normal; Font-Style was in Mason V6. */
+color:#006633;
+/* color:#0000ff; SCT V7 default */
+/* This changes the menu items link color */
+text-decoration: none;
+}
+
+A.submenulinktext2:hover {
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+text-decoration: none;
+/* text-decoration:underline; SCT V7 default */
+}
+
+A.submenulinktext2:visited {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+font-style: normal;
+color:#006633;
+/* color:#660099;; SCT V7 default */
+/* This changes the menu items visited link color */
+text-decoration: none;
+}
+
+A.submenulinktext2:visited:hover {
+font-family:  Verdana,Arial Narrow, helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 90%;
+text-decoration: none;
+/* text-decoration:underline; SCT V7 default */
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+/* This changes the menu items hover link color */
+}
+
+
+
+A.whitespacelink 
+{ 
+line-height: 200%;
+COLOR: #006633;
+/* COLOR: #1E2B83; SCT V7 default */
+/* This changes the color of the bottom nav bar links in Netscape. */
+text-decoration: underline;
+}
+
+
+A.largelinktext {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 110%;
+font-style: normal;
+text-align: left;
+text-decoration: underline;
+}
+
+
+A.sitemaplevel1 {
+font-family:  Verdana,Arial, helvetica, sans-serif;
+font-weight: bold;
+font-size: 80%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color: #006633;
+/* color:       #1E2B83; SCT V7 default */
+/* This changes the color of the Site Map's first level (large) links in Netscape. */
+}
+
+A.sitemaplevel1:visited {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#006633;
+/* This changes the site map items (large) list link color */
+}
+
+
+A.sitemaplevel1:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+/* text-decoration:underline; SCT V7 default */
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+/* This changes the site map items (large) list hover link color */
+}
+
+
+A.sitemaplevel2 {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 70%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#006633;
+/* color:#0000ff; SCT V7 default */
+/* This changes the site map items (small) list link color */
+}
+
+A.sitemaplevel2:visited {
+font-family:  Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#006633;
+/* color:#660099; SCT V7 default */
+/* This changes the site map items (small) list link color */
+}
+
+A.sitemaplevel2:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+/* text-decoration:underline; SCT V7 default */
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+/* This changes the site map items (small) list hover link color */
+}
+
+A.sitemaplevel3 {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+/* font-weight: normal; SCT V7 default */
+font-size: 60%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#006633;
+/* color:#0000ff; SCT V7 default */
+/* This changes the site map items (details) list link color */
+}
+
+A.sitemaplevel3:visited {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 60%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#006633;
+/* color:#660099; SCT V7 default */
+/* This changes the site map items (details) list link color */
+}
+
+A.sitemaplevel3:hover {
+font-family: Verdana,Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size  : 70%;
+font-style : normal;
+text-align : left;
+color:#CC9900;
+/* color:#990000; SCT V7 default */
+text-decoration: none;
+/* text-decoration:underline; SCT V7 default */
+}
+
+
+/* ANCHOR Definitions for Home Page MenuItems class.        */
+/* ======================================================== */
+
+/* Mason commented out the following lines due to these lines already appearing 
+   at line 539 thru line 671.
+   
+A.whitespacelink 
+{ 
+line-height: 200%;
+color: black;
+text-decoration: underline;
+}
+
+
+A.largelinktext {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 120%;
+font-style: normal;
+text-align: left;
+text-decoration: underline;
+}
+
+
+A.sitemaplevel1 {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 80%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#0000ff;
+}
+
+A.sitemaplevel1:visited {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel1:hover {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration:underline;
+color:#990000;
+}
+
+
+A.sitemaplevel2 {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 80%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#0000ff;
+}
+
+A.sitemaplevel2:visited {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel2:hover {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 80%;
+font-style : normal;
+text-align : left;
+text-decoration:underline;
+color:#990000;
+}
+
+A.sitemaplevel3 {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 60%;
+font-style: normal;
+text-align: left;
+text-decoration: none;
+color:#0000ff;
+}
+
+A.sitemaplevel3:visited {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 60%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+color:#660099;
+}
+
+A.sitemaplevel3:hover {
+font-family: Verdana, Arial,  helvetica, sans-serif;
+font-weight: normal;
+font-size  : 60%;
+font-style : normal;
+text-align : left;
+text-decoration: none;
+text-decoration:underline;
+color:#990000;
+}
+
+*/
+
+.whitespace1{
+padding-top:0em;
+}
+
+.whitespace2{
+padding-top:1em;
+}
+.whitespace3{
+padding-top:2em;
+}
+.whitespace4{
+padding-top:3em;
+}
+
+/* BODY                                                     */
+/* ======================================================== */
+BODY {
+background-color: #FFFFFF;
+color: black;
+/* This changes the color of the text within the body.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 0px;
+margin-left: 1%;
+margin-right: 2%;
+/* background-image: url(/wtlgifs/web_bg_app.jpg); SCT V7 default */
+/* Commented out the background-image so that the Mason image will appear static on the page. */
+background-repeat: no-repeat;
+}
+BODY.campuspipeline {
+background-color: #FFFFFF;
+color: 006633;
+/* color: black; SCT V7 default */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 6px;
+margin-left: 2%;
+background-image: none;
+background-repeat: no-repeat;
+}
+BODY.previewbody {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+margin-left: 2%;
+margin-right: 2%;
+/* Override the background image in the main BODY */
+background-image: none;
+}
+
+BODY.validationbody {
+background-color: #FFFFFF;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+margin-left: 0%;
+margin-right: 2%;
+/* Override the background image in the main BODY */
+background-image: none;
+}
+
+/* DIVIDES                                                  */
+/* All divides should have rules defined for margin and     */
+/* text-align.                                              */
+/* ======================================================== */
+DIV.menulistdiv {
+text-align: left;
+}
+
+DIV.headerwrapperdiv {
+margin-left: 0px;
+margin-top: 0px;
+}
+
+DIV.pageheaderdiv1 {
+text-align: left;
+margin-top: 0%;
+/* Changed margin-top size to zero when we removed the SCT supplied background image */
+/* margin-top: 8%; SCT V7 default */
+margin-left: 0px;
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+DIV.pageheaderdiv2 {
+text-align: right;
+margin-top: 10px;
+margin-right: 10px;
+position: absolute;
+top: 0px;
+right: 0px;
+float: right;
+display: none;
+}
+
+DIV.headerlinksdiv {
+text-align: left;
+margin-right: 0%;
+}
+
+/* Class for BANNER SEARCH Form text and button controls     */
+/* ========================================================  */
+DIV.headerlinksdiv2 {
+color: black;
+/* This changes the color of the Search text next to the box.*/
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+text-transform: none;
+}
+
+DIV.bodylinksdiv {
+text-align: center;
+margin-top: 1%;
+}
+
+DIV.footerlinksdiv {
+text-align: center;
+}
+
+DIV.backlinkdiv {
+text-align: right;
+margin-top: -40px;
+}
+
+DIV.pagetitlediv {
+text-align: left;
+}
+
+DIV.infotextdiv {
+text-align: left;
+}
+
+DIV.pagebodydiv {
+text-align: left;
+}
+
+DIV.pagefooterdiv {
+text-align: left;
+border: 0px;
+margin-top: 0px;
+float: left;
+}
+
+DIV.poweredbydiv {
+text-align: right;
+margin-right: -1px;
+margin-top: 0px;
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+float: right;
+}
+
+DIV.previewdiv {
+text-align: center;
+}
+
+DIV.validationdiv {
+text-align: center;
+}
+
+DIV.staticheaders {
+text-align: right;
+font-size:  90%;
+}
+
+/* HEADERS                                                  */
+/* Do not set font-size for headers - defer to browser.      */
+/* ======================================================== */
+/* H1 is reserved for Page Header */
+H1 {
+color: #000000;
+/* color: #FFFFFF; SCT V7 default */
+/* This changes the color of the Patriot Web Self Service text */
+/* Mason added the following background-color line.
+background-color: #66CC99; */
+/* This changes the color of the background of the Patriot Web Self Service text. */
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-style: normal;
+font-size:0%;
+margin-top: 0px;
+}
+
+
+/* H2 is reserved for Page Title */
+H2 {
+color	   : BLACK;
+/* This changes the color of the Menu-Page title text. */
+/* Mason added the following background-color line.
+background-color: #FFCC33; */
+/* This changes the color of the Menu-Page title background. */
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-style : normal;
+}
+
+/* H3 is reserved for Sub Title */
+H3 {
+color	   : BLACK;
+font-family: verdana, Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-style : normal;
+}
+
+/* Horizontal Rule for Menu Section                         */
+/* ======================================================== */
+
+HR {
+color: #999999;
+/* color: #CCCC33; SCT V7 default */
+text-align: left;
+vertical-align: top;
+margin-top: -10px;
+HEIGHT="2"
+}
+
+HR.pageseprator {
+color: #999999;
+/* color: #003366; SCT V7 default */
+text-align: left;
+vertical-align: top;
+}
+
+
+/* FORM CONTROLS                                            */
+/* ======================================================== */
+INPUT {
+/*background-color: #FFFFFF; SCT commented this out in V7. */
+/* This changes the color of the Search entry box. */
+color: black;
+/* This changes the color of the Search button text. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+}
+
+
+TEXTAREA {
+/*background-color: #FFFFFF; SCT commented this out in V7. */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+
+}
+
+SELECT {
+/*background-color: #FFFFFF;*/
+color: black;
+/* This changes the color of the text in the Select drop down box. */
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+}
+
+
+
+/* TABLES                                                   */
+/* ======================================================== */
+TABLE.dataentrytable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.datadisplaytable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.plaintable {
+border-bottom: 0px solid;
+border-left: 0px solid;
+border-right: 0px solid;
+border-top: 0px solid;
+}
+
+TABLE.menuplaintable {
+/* Create a horizontal rule effect. */
+border-top: 1pt #666666 solid;
+/* border-top: 1pt #707070 solid; SCT V7 default */
+}
+
+TABLE.pageheadertable {
+margin-top: 0px;
+}
+
+TABLE.colorsampletable {
+background-color: #FFFFFF;
+}
+
+TABLE.bordertable {
+border-collapse:collapse;
+border-bottom: 1px solid;
+border-left: 1px solid;
+border-right: 1px solid;
+border-top: 1px solid;
+}
+
+/* TABLE HEADERS AND DATA CELLS                             */
+/* ======================================================== */
+TABLE TH {
+vertical-align: top;
+color: black;
+/* Don't know what this changes.*/
+}
+
+TABLE TD {
+vertical-align: top;
+color: black;
+/* Don't know what this changes.*/
+}
+
+.pageheadertablecell {
+text-align: left;
+}
+
+.pageheadernavlinkstablecell {
+text-align: right;
+}
+
+/* DATA ENTRY TABLE HEADERS AND DATA CELLS                  */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.deheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.deheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.detitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.detitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.delabel {
+/*background-color: #E3E5EE; Commented out by SCT V7 */
+/* Mason added the following background-color line for Admissions. 
+This adds color to the question area in tables. */
+background-color: #66CC99;
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.delabel {
+/*background-color: #E3E5EE; Commented out by SCT V7 */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.deseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dehighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dedead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dedefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Mason added the following border-bottom line for Admissions. 
+This adds lines to the bottom of answer areas in tables. */
+border-bottom: 1px #999999 solid;
+}
+
+TABLE TD.dewhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.deborder {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+border: 1px solid;
+
+}
+
+/* DATA DISPLAY TABLE HEADERS AND DATA CELLS                */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.ddheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ddheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddtitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.ddtitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.ddlabel {
+/*background-color: #E3E5EE; Commneted out by SCT V7 */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ddlabel {
+/*background-color: #E3E5EE; Commneted out by SCT V7 */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+
+TABLE TD.ddseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddhighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dddead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.dddefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/*border-bottom: 1pt #BFBFBF solid; Commneted out by SCT V7 */
+/* Mason added the following 2 border lines. */
+border-bottom: 1px #999999 solid;
+border-right: 1px #999999 solid;
+/* This puts lines between rows and columns. */
+}
+
+TABLE TD.ddnontabular {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ddwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+/* PLAIN TABLE HEADERS AND DATA CELLS                       */
+/* These table data cell classes pertain to a table that is */
+/* used strictly for layout. They do not have the redundant */
+/* font rules because it is assumed that whatever is placed */
+/* in these TD/TH tags will have its own class.             */
+/* ======================================================== */
+TABLE TD.pltitle {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+/* font-weight: normal; Mason commented out due to 2 entries. */
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TD.plheader {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TH.pllabel {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-size: 90%;
+font-weight: bold;
+}
+
+TABLE TD.plseparator {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.plhighlight {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.pldead {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.pldefault {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.plwhite {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+TABLE TD.plheaderlinks {
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+}
+
+
+/*========================================================*/
+/*=======  Class for header links=========================*/
+/*========================================================*/
+
+TABLE TD.plheadermenulinks {
+font-weight: normal;
+/*background-color:#CED5EA; Commented out by SCT V7 */
+}
+
+
+
+
+/* MENU PLAIN TABLE HEADERS AND DATA CELLS                  */
+/* ======================================================== */
+TABLE TD.mptitle {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpheader {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.mplabel {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.mpdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.indefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+}
+
+/* Define tables with border				    */
+/* ======================================================== */
+TABLE TD.dbheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TH.dbheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TD.dbtitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+border: 1px solid;
+}
+
+TABLE TH.dbtitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+border: 1px solid;
+}
+
+TABLE TD.dblabel {
+/*background-color: #E3E5EE; Commented out by SCT V7 */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TH.dblabel {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+TABLE TD.dbdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+border: 1px solid;
+}
+
+
+
+
+/* NON TABULAR TABLE DATA DISPLAY  HEADERS AND DATA CELLS  */
+/* Some font rules are redunant because they do not         */
+/* inherit well from the BODY on older browsers.            */
+/* ======================================================== */
+TABLE TD.ntheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ntheader {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.nttitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TH.nttitle {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+/* Make titles big and chunky. */
+padding-bottom: 1em;
+}
+
+TABLE TD.ntlabel {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TH.ntlabel {
+background-color: #66CC99;
+/* background-color: #E3E5EE; SCT V7 default */
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: bold;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntseparator {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.nthighlight {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntdead {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntdefault {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+TABLE TD.ntwhite {
+color: black;
+font-family: Verdana,Arial Narrow,  helvetica, sans-serif;
+font-weight: normal;
+font-size: 90%;
+font-style: normal;
+text-align: left;
+vertical-align: top;
+}
+
+/*
+New Tab styles for Self Service
+*/
+
+.bgtabon {
+	BACKGROUND-COLOR: #FFCC33
+/*	BACKGROUND-COLOR: #003366 - SCT V7 default */
+}
+
+.bgtaboff {
+	BACKGROUND-COLOR: #006633
+/*	BACKGROUND-COLOR: #cccccc - SCT V7 default */
+}
+
+.texttabon {
+	COLOR: #ffffff
+}
+
+.texttaboff {
+	COLOR: #000000
+}
+
+.tabon {
+/*	PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/wtlgifs/web_tab_corner.gif); COLOR: #ffffff; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #003366 - SCT V7 default */
+	PADDING-LEFT: 8px; 
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12px; 
+	BACKGROUND-IMAGE: /*savepage-url=/wtlgifs/web_tab_corner.gif*/ var(--savepage-url-4); 
+	COLOR: #000000; 
+	BACKGROUND-REPEAT: no-repeat; 
+	BACKGROUND-COLOR: #FFCC33
+}
+
+.tabon A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+/* 	COLOR: #ffffff; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.tabon A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+/*	COLOR: #ffffff; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.tabon A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+/*	COLOR: #ffffff; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.tabon A:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+/*	COLOR: #ffffff; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.taboff {
+	PADDING-LEFT: 8px; 
+      FONT-WEIGHT: bold; 
+      FONT-SIZE: 12px; 
+      BACKGROUND-IMAGE: /*savepage-url=/wtlgifs/web_tab_corner.gif*/ var(--savepage-url-4); 
+      COLOR: #ffffff; 
+      BACKGROUND-REPEAT: no-repeat; 
+      BACKGROUND-COLOR: #006633
+/*	PADDING-LEFT: 8px; 
+      FONT-WEIGHT: bold; 
+      FONT-SIZE: 12px; 
+      BACKGROUND-IMAGE: url(/wtlgifs/web_tab_corner.gif); 
+      COLOR: #000000; 
+      BACKGROUND-REPEAT: no-repeat; 
+      BACKGROUND-COLOR: #cccccc - SCT V7 default */
+}
+
+.taboff A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+/*	COLOR: #000000; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.taboff A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+/*	COLOR: #000000; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.taboff A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+/*	COLOR: #000000; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.taboff A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+/*	COLOR: #000000; TEXT-DECORATION: none - SCT V7 default */
+}
+
+.bg3 {
+	BACKGROUND-COLOR: #006633
+/*	BACKGROUND-COLOR: #cccc00 - SCT V7 default */
+}
+
+
+</style>
+<style data-savepage-href="/css/web_defaultprint.css" type="text/css" media="print">/*
+  AUDIT TRAIL: 6.0	
+  1. Hide HR tag for printing					Rk 3/26/2003
+  2. Reduce font sizes for datadisplay tables to fit in page. This will be useful
+     for pages which have lot of content.
+
+  AUDIT TRAIL: 5.3
+  1. Initial release.                        rk 6/14/2002
+
+	This style sheet will be used for print media. 
+	Use this style sheet to define print tags.
+        This style sheet can also be used to override styles from application pages.
+
+  AUDIT TRAIL END
+
+  FILE NAME..: web_defaultprint.css
+  RELEASE....: 5.3
+  PRODUCT....: WTLWEB
+  COPYRIGHT..: Copyright (C) SCT Corporation 2002. All rights reserved.
+*/
+
+
+@media print 
+{
+  /* style sheet for print goes here */
+
+BODY {
+font-family: Arial, verdana, helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 0%;
+margin-left: 0%;
+}
+
+
+DIV.backlinkdiv {
+display:none
+}
+
+DIV.pageheaderdiv2 {
+display: none 
+}
+
+DIV.headerlinksdiv {
+display: none 
+}
+DIV.poweredbydiv {
+display: none 
+}
+
+DIV.footerlinksdiv{
+display: none 
+}
+
+HR {
+color: #FFFFFF;
+text-align: left;
+vertical-align: top;
+margin-top: 0px;
+}
+
+Table.datadisplaytable{
+font-size :80%
+}
+
+
+TABLE TD.dddefault {
+font-size:75%;
+}
+
+TABLE TH.dddefault {
+font-size: 80%;
+}
+
+Table TH.ddlabel
+{
+font-size: 80%;
+}
+}
+</style>
+<title>Mason Alert Registration</title>
+<meta http-equiv="Content-Script-Type" name="Default_Script_Language" content="text/javascript">
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain"></script>
+<script language="JavaScript" data-savepage-type="text/javascript" type="text/plain"></script>
+
+<style id="savepage-cssvariables">
+  :root {
+    --savepage-url-4: url(data:image/gif;base64,R0lGODlhCAAUAIAAAP///////yH5BAEAAAEALAAAAAAIABQAQAIdhI8Qu8qMnnkt1glxpsHR5CSZ1h0SWXoVh3acyxUAOw==);
+  }
+</style>
+<script id="savepage-shadowloader" type="text/javascript">
+  "use strict";
+  window.addEventListener("DOMContentLoaded",
+  function(event) {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="https://patriotweb.gmu.edu/pls/prod/zwgkalrt.P_DisplayPage">
+<meta name="savepage-title" content="Mason Alert Registration">
+<meta name="savepage-pubdate" content="Unknown">
+<meta name="savepage-from" content="https://patriotweb.gmu.edu/pls/prod/zwgkalrt.P_DisplayPage">
+<meta name="savepage-date" content="Wed May 21 2025 13:53:39 GMT-0400 (Eastern Daylight Time)">
+<meta name="savepage-state" content="Standard Items; Retain cross-origin frames; Merge CSS images; Remove unsaved URLs; Load lazy images in existing content; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="33.9">
+<meta name="savepage-comments" content="">
+  </head>
+<body>
+<div id="headerImage">
+<img data-savepage-currentsrc="https://patriotweb.gmu.edu/gmugifs/gmulogo6.gif" data-savepage-src="/gmugifs/gmulogo6.gif" src="data:image/gif;base64,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" class="headerImg" title="" name="GMU Logo" hspace="0" vspace="0" border="0" height="50" width="200">
+</div>
+<div class="headerwrapperdiv">
+<div class="pageheaderdiv1">
+<a href="#main_content" onmouseover="window.status='Go to Main Content'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Go to Main Content'; return true" onblur="window.status=''; return true" class="skiplinks">Go to Main Content</a>
+<h1> George Mason University</h1></div><div class="headerlinksdiv">
+<span class="pageheaderlinks2">
+<map name="Module_Navigation_Links_H" title="Module Navigation Links">
+<p>
+<a href="#skip_Module_Navigation_Links_H" onmouseover="window.status='Skip Module Navigation Links'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Skip Module Navigation Links'; return true" onblur="window.status=''; return true" class="skiplinks">Skip Module Navigation Links</a>
+</p><table class="plaintable" summary="This is main table for displaying Tab Items." width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td class="pldefault">
+<table class="plaintable" summary="This table displays Tab Items." cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td class="tabon" height="22">
+<a data-savepage-href="/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" href="https://patriotweb.gmu.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" onmouseover="window.status='Personal Information'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Personal Information'; return true" onblur="window.status=''; return true">Personal Information</a>
+</td>
+<td class="bgtabon" height="22" valign="top" align="right">
+<img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_tab_corner_right.gif" data-savepage-src="/wtlgifs/web_tab_corner_right.gif" src="data:image/gif;base64,R0lGODlhCAAUAIAAAP///////yH5BAEAAAEALAAAAAAIABQAQAIbhG+heuvwmguJoViXjJPZ+2XUNorlRFqd6a0FADs=" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" hspace="0" vspace="0" border="0" height="20" width="8">
+</td>
+<td class="taboff" height="22">
+<a data-savepage-href="/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" href="https://patriotweb.gmu.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onmouseover="window.status='Student Services'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Student Services'; return true" onblur="window.status=''; return true">Student Services</a>
+</td>
+<td class="bgtaboff" height="22" valign="top" align="right">
+<img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_tab_corner_right.gif" data-savepage-src="/wtlgifs/web_tab_corner_right.gif" src="data:image/gif;base64,R0lGODlhCAAUAIAAAP///////yH5BAEAAAEALAAAAAAIABQAQAIbhG+heuvwmguJoViXjJPZ+2XUNorlRFqd6a0FADs=" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" hspace="0" vspace="0" border="0" height="20" width="8">
+</td>
+<td class="taboff" height="22">
+<a data-savepage-href="/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu" href="https://patriotweb.gmu.edu/pls/prod/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu" onmouseover="window.status='Financial Aid'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Financial Aid'; return true" onblur="window.status=''; return true">Financial Aid</a>
+</td>
+<td class="bgtaboff" height="22" valign="top" align="right">
+<img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_tab_corner_right.gif" data-savepage-src="/wtlgifs/web_tab_corner_right.gif" src="data:image/gif;base64,R0lGODlhCAAUAIAAAP///////yH5BAEAAAEALAAAAAAIABQAQAIbhG+heuvwmguJoViXjJPZ+2XUNorlRFqd6a0FADs=" alt="Tab Corner Right" class="headerImg" title="Tab Corner Right" name="web_tab_corner_right" hspace="0" vspace="0" border="0" height="20" width="8">
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="bgtabon" width="100%" colspan="2"><img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_transparent.gif" data-savepage-src="/wtlgifs/web_transparent.gif" src="data:image/gif;base64,R0lGODlhAQABAPAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" hspace="0" vspace="0" border="0" height="3" width="10"></td></tr></tbody></table>
+</map>
+</span>
+<a name="skip_Module_Navigation_Links_H"></a>
+</div>
+<table class="plaintable" summary="This table displays Menu Items and Banner Search textbox." width="100%">
+<tbody><tr>
+<td class="pldefault">
+<div class="headerlinksdiv2">
+<form action="/pls/prod/twbksrch.P_ShowResults" method="post">
+Search
+<span class="fieldlabeltextinvisible"><label for="keyword_in_id"><span class="fieldlabeltext">Search</span></label></span>
+<input type="text" name="KEYWRD_IN" size="20" maxlength="65" id="keyword_in_id" value="">
+<input type="submit" value="Go">
+</form>
+</div>
+</td>
+<td class="pldefault"><p class="rightaligntext" p="">
+<span class="pageheaderlinks">
+<a data-savepage-href="/pls/prod/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&depth_in=2&columns_in=3" href="https://patriotweb.gmu.edu/pls/prod/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&depth_in=2&columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</a>
+|
+<a data-savepage-href="/wtlhelp/twbhhelp.htm" href="https://patriotweb.gmu.edu/wtlhelp/twbhhelp.htm" accesskey="H" onclick="popup = window.open('/wtlhelp/twbhhelp.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onmouseover="window.status='';  return true" onmouseout="window.status=''; return true" onfocus="window.status='';  return true" onblur="window.status=''; return true" class="submenulinktext2">HELP</a>
+|
+<a data-savepage-href="twbkwbis.P_Logout" href="https://patriotweb.gmu.edu/pls/prod/twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</a>
+</span>
+</p></td>
+</tr>
+</tbody></table>
+</div>
+<div class="pagetitlediv">
+<table class="plaintable" summary="This table displays title and static header displays." width="100%">
+<tbody><tr>
+<td class="pldefault">
+<h2>Mason Alert Registration</h2>
+</td>
+<td class="pldefault">
+ 
+</td>
+<td class="pldefault"><p class="rightaligntext" p="">
+</p><div class="staticheaders">
+</div>
+</td>
+</tr>
+<tr>
+<td class="bg3" width="100%" colspan="3"><img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_transparent.gif" data-savepage-src="/wtlgifs/web_transparent.gif" src="data:image/gif;base64,R0lGODlhAQABAPAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" hspace="0" vspace="0" border="0" height="3" width="10"></td>
+</tr>
+</tbody></table>
+<a name="main_content"></a>
+</div>
+<div class="pagebodydiv">
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+
+<form action="/pls/prod/zwgkalrt.P_Submit" method="post">
+<input type="hidden" name="v_isConfirmation" value="N">
+<font color="black" face="Verdana,Arial" size="2">
+<p>
+Mason Alert is the university’s emergency notification system. All students and employees are encouraged to provide a mobile phone number the university can use to contact you in an emergency and capable of receiving text messages regarding events that impact your safety.  For more information about Mason Alert please visit https://alert.gmu.edu.
+</p><p>
+<b>Mobile Phone Number: </b>
+<input type="text" name="v_cellPhoneNumber" size="20" maxlength="20" value="5716213258">
+        
+<input type="checkbox" name="v_isInternational">
+<b>International Number</b>
+</p><p>
+Please select one option below:
+</p><p>
+<input type="radio" name="v_decision" value="opt_in" checked="checked">
+  Yes, I DO want to receive text message emergency notifications and be contacted during an emergency by the university
+</p><p>
+<input type="radio" name="v_decision" value="opt_out">
+  No, I DO NOT want to receive text message emergency notifications and be contacted during an emergency by the university
+<br>
+<br>
+</p></font><p><font color="black" face="Verdana,Arial" size="2">
+<input type="submit" value="Submit">
+<br>
+<br>
+</font>
+</p></form>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<table class="plaintable" summary="This is table displays line separator at end of the page." width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bgtabon" width="100%" colspan="2"><img data-savepage-currentsrc="https://patriotweb.gmu.edu/wtlgifs/web_transparent.gif" data-savepage-src="/wtlgifs/web_transparent.gif" src="data:image/gif;base64,R0lGODlhAQABAPAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Transparent Image" class="headerImg" title="Transparent Image" name="web_transparent" hspace="0" vspace="0" border="0" height="3" width="10"></td></tr></tbody></table>
+<a href="#top" onmouseover="window.status='Skip to top of page'; return true" onmouseout="window.status=''; return true" onfocus="window.status='Skip to top of page'; return true" onblur="window.status=''; return true" class="skiplinks">Skip to top of page</a>
+</div>
+<div class="footerbeforediv">
+
+</div>
+<div class="footerafterdiv">
+
+</div>
+<div class="globalafterdiv">
+
+</div>
+<div class="globalfooterdiv">
+
+</div>
+<div class="pagefooterdiv">
+<span class="releasetext">Release: 8.9</span>
+</div>
+<div class="poweredbydiv">
+</div>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<div class="div4"></div>
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="banner_copyright"> <br><h5>© 2025 Ellucian Company L.P. and its affiliates.<br></h5></div>
+
+
+<div id="hl-aria-live-message-container" aria-live="polite" class="visually-hidden"></div><div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div></body></html>
